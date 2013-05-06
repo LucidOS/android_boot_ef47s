@@ -1,7 +1,19 @@
 #
 # ADDITIONAL_DEFAULT_PROPERTIES
 #
-ro.secure=1
+
+# Shell lock
+# 0 : lock, 1 : Root
+ro.secure=0
+
+# Fake Location
+# 0 : disable, 1 : enable
 ro.allow.mock.location=0
-ro.debuggable=0
+
+# debug enable 
+# 0 : disable, 1 : enable
+ro.debuggable=1
+
+# adb service
+# 0 : disable, 1 : enable
 persist.service.adb.enable=0
