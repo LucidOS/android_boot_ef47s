@@ -67,4 +67,6 @@ fi
 
 # This should be the last command
 # remount system as read-only.
-mount -o ro,remount,barrier=1 /system
+# LucidOS Team
+# but I need system mount so Edit under command, Ha Ha Ha
+mount -o rw,remount,barrier=1 /system

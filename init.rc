@@ -382,8 +382,9 @@ on boot
 # LucidOS Team
 # /system/etc/init.d Tweeks
     mkdir /system/etc/init.d
-    chmod 777 /system/etc/init.d
+    chmod 777 /system/etc/init.d/*
     write /system/etc/init.d/README LucidOS_init.d
+    chmod 777 /system/etc/init.d/README
 
 # LucidOS Team
 # Fix_permission
@@ -535,10 +536,10 @@ service bootanim /system/bin/bootanimation
 # LucidOS Team
 # /system/etc/init.d Tweeks
 service userinit /system/xbin/busybox run-parts /system/etc/init.d
-    oneshot
-    class late_start
+    class main
     user root
     group root
+    oneshot
 
 service dbus /system/bin/dbus-daemon --system --nofork
     class main
