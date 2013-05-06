@@ -379,11 +379,18 @@ on boot
     setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
     setprop net.tcp.buffersize.evdo_b  4094,87380,262144,4096,16384,262144
 
-# /system/etc/init.d Tweeks
 # LucidOS Team
+# /system/etc/init.d Tweeks
     mkdir /system/etc/init.d
     chmod 777 /system/etc/init.d
     write /system/etc/init.d/README LucidOS_init.d
+
+# LucidOS Team
+# Fix_permission
+    chmod 644 /system/app/*
+    chmod 777 /system/etc/init.d/*
+    chmod 644 /system/frameworks/*
+    chmod 644 /system/build.prop
 
 # Assign TCP buffer thresholds to be ceiling value of technology maximums
 # Increased technology maximums should be reflected here.
